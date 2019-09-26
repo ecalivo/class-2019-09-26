@@ -1,0 +1,19 @@
+---
+title: "gapminder"
+author: "Emmanuel Calivo"
+date: "9/26/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(gapminder)
+```
+
+``` {r make_plot}
+gapminder1962 <- gapminder %>% 
+  filter(year == 1962, continent %in% c("Americas", "Asia", "Africa"))
+
+ggplot(gapminder1962, aes(x = gdpPercap, y = lifeExp)) + geom_point() + facet_wrap(vars(continent))
+```
