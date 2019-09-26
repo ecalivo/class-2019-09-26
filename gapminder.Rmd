@@ -1,5 +1,5 @@
 ---
-title: "gapminder"
+title: "Gapminder"
 author: "Emmanuel Calivo"
 date: "9/26/2019"
 output: html_document
@@ -9,6 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(gapminder)
+library(gifski)
+library(gganimate)
 ```
 
 ``` {r make_plot}
